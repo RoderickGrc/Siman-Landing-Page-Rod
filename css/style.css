@@ -1,0 +1,201 @@
+/* Reset basico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-primary: #e74c3c;
+    --color-secondary: #fff;
+    --color-background: #000;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    position: relative; 
+    z-index: 10; 
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+
+.user-actions a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:auto;
+    margin-bottom: 2rem;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secondary);
+    text-align: center;
+    position: relative; 
+    z-index: 1;
+}
+
+
+
+.product-showcase {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.brand-legacy {
+    display: flex;
+    padding: 2rem 5rem;
+    background-color: var(--color-primary);
+}
+
+.legacy-content, .legacy-image {
+    flex: 1;
+    margin: 2rem;
+}
+
+.legacy-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.social-connect {
+    text-align: center;
+    padding: 2rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-background);
+    color: var(--color-secondary);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: var(--color-background);
+    color: var(--color-secondary);
+}
+
+.page-content {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+/* Sección de descuentos */
+.discounts {
+    padding: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+}
+
+.discount-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.discount-item {
+    background-color: var(--color-secondary);
+    border: 1px solid  var(--color-primary);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 8px  var(--color-background);
+    transition: transform 0.3s ease;
+}
+
+.discount-item:hover {
+    transform: translateY(-5px);
+}
+
+.discount-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.discount-details {
+    font-size: 1rem;
+}
+
+.discount-details h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header, .brand-legacy, footer {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-bottom: 1rem;
+    }
+
+    .legacy-content, .legacy-image {
+        margin-bottom: 1rem;
+    }
+}
+
